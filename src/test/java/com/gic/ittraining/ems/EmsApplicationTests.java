@@ -24,5 +24,6 @@ public class EmsApplicationTests {
 	//abc
 	//japan
 	//May3
+	//myanmar
 }
 
