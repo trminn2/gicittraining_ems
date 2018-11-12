@@ -10,6 +10,5 @@ public class EmsApplication {
 		SpringApplication.run(EmsApplication.class, args);
 	}
 	
-	//sdkfjsdfsdfdf
-	//@Requestasdasda
+	//@RequestMapping
 }
