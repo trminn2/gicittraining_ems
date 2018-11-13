@@ -10,13 +10,4 @@ public class EmsApplication {
 		SpringApplication.run(EmsApplication.class, args);
 	}
 	
-	//@RequestMapping
-
-	//html
-	//ttk
-
-	// MTL added
-
-
-// 
 }
