@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>top page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form name="search" action="/gicEMS" accept-charset="UTF8" method="get">
+<input type="text" name="employeeId" placeholder="社員番号"/>
+<input type="text" name="firstName" placeholder="社員名"/>
+<input type="text" name="gender" placeholder="性別"/>
+<input type="text" name="name" placeholder="グループ"/>
+<input type="text" name="email" placeholder="メール"/>
+<input type="submit" value="検索" style="background-color: #CCFFCC;"/>
+</form>
+<table class="list" border="1" style="width: 70%">
+    <tr bgcolor = "#FFE4C4">
+     　	　　<!-- <th style="text-align:left;">番号</th> -->
+      <th style="text-align:left;">社員番号</th>
+      <th style="text-align:left;">社員名</th>
+      <th style="text-align:left;">性別</th>
+     <th style="text-align:left;">グループ</th>
+      <th style="text-align:left;">メール</th>
+    </tr>
+    <!-- <tr th:if="${not #list.isEmpty(list)}"> -->
+    <tr th:each="list:${list}">
+        <td th:text="${list.employeeId}"></td>
+       <td th:text="${list.firstName} + ' ' + ${list.lastName}"></td>
+       <td th:text="${list.gender}"></td>
+       <td th:text="${list.name}"></td>
+      <td th:text="${list.email}"></td>
+    </tr>
+  </table> 
+</body>
+</html>
