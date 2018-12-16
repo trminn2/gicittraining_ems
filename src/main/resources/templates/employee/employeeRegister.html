@@ -1,0 +1,167 @@
+
+<!-- 
+ 作成日：　2018年12月15日
+  作成者：　モープィンピュー
+  更新日：
+  更新者：
+  説明　：　社員登録html
+ -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>社員初期情報登録</title>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script>
+	var showtext = "[[${msg}]]";
+	console.log(showtext);
+</script>
+</head>
+<body>
+	<div class="container">
+		<div style="margin-top: 50px;">
+			<form class="form-horizontal" role="form" method="post" name="create"
+				action="/employee" accept-charset="UTF8">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<div class="alert alert-success" role="alert" th:if="${msg}"
+							th:utext="Employee has been registered successfully!"></div>
+					</div>
+				</div>
+				<div th:if="${message}" th:text="${message}"
+					th:class="${'alert ' + alertClass}"></div>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<h2>社員初期情報登録</h2>
+						<hr>
+					</div>
+				</div>
+				<!-- 社員ID:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="employeeId">社員ID:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="employeeId" class="form-control"
+									id="employeeId" maxlength=8  style="ime-mode: disabled;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 社員ID:  -->
+				<!-- 姓:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="firstName">姓:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="firstName" class="form-control"
+									id="firstName" maxlength=25 style="ime-mode: auto;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 姓:  -->
+				<!-- 名:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="lastName">名:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="lastName" class="form-control"
+									id="lastName" maxlength=25 style="ime-mode: auto;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 名:  -->
+				<!-- 姓カナ:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="firstNameKana">姓カナ:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="firstNameKana" class="form-control"
+									id="firstNameKana" maxlength=25 style="ime-mode: auto;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 姓カナ:  -->
+				<!-- 名カナ:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="firstNameKana">姓カナ:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="lastNameKana" class="form-control"
+									id="lastNameKana" maxlength=25 style="ime-mode: auto;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 名カナ:  -->
+				<!-- 性別:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="gender">性別:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="radio" name="gender" value="M">男&nbsp;&nbsp;&nbsp;<input
+									type="radio" name="gender" value="F">女<br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 性別:  -->
+				<!-- メールアドレス:  -->
+				<div class="row">
+					<div class="col-md-3 field-label-responsive">
+						<label for="gender">メールアドレス:</label>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+								<input type="text" name="email" class="form-control" id="email"
+									maxlength=25 style="ime-mode: auto;" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- メールアドレス:  -->
+
+				<div class="row" style="margin-left: 200px;">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+						<button type="submit" class="btn btn-primary mb1 bg-navy">
+							<i class="fa fa-user-plus"></i> 登録
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
