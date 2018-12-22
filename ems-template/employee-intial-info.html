@@ -38,71 +38,62 @@
 		<form class="form-horizontal" role="form" method="post" name="create"
 			action="/employee" accept-charset="UTF8">
 			<div class="form-group">
-				<h3>社員初期情報登録</h3>
-				<hr>
+				<h4>社員初期情報登録</h4>
 			</div>
-			<!-- 	社員ID:  -->
 			<div class="form-group">
 				<label for="employeeId">社員ID:</label> <input type="text"
 					class="form-control form-control-sm" id="employeeId"
 					aria-describedby="employeeId" placeholder="社員ID"> <small
 					id="employeeId" class="form-text text-muted"></small>
 			</div>
-			<!-- 	社員ID:  -->
-			<!-- 	姓:	  -->
-			<div class="form-group">
-				<label for="firstName">姓:</label> <input type="text"
-					class="form-control form-control-sm" id="firstName"
-					aria-describedby="firstName" placeholder="姓"> <small
-					id="firstName" maxlength=25 class="form-text text-muted"></small>
-			</div>
-			<!-- 	姓: 	 -->
-			<!--	 名:  	-->
-			<div class="form-group">
-				<label for="lastName">名:</label> <input type="text"
-					class="form-control form-control-sm" id="lastName"
-					aria-describedby="lastName" placeholder="名"> <small
-					id="lastName" maxlength=25 class="form-text text-muted"></small>
-			</div>
-			<!-- 	名:	  -->
-			<!-- 	姓カナ:  	-->
-			<div class="form-group">
-				<label for="firstNameKana">姓カナ:</label> <input type="text"
-					class="form-control form-control-sm" id="firstNameKana"
-					aria-describedby="firstNameKana" placeholder="姓カナ"> <small
-					id="firstNameKana" maxlength=25 class="form-text text-muted"></small>
-			</div>
-			<!-- 	姓カナ: 	 -->
-			<!-- 	名カナ:  	-->
-			<div class="form-group">
-				<label for="lastNameKana">名カナ:</label> <input type="text"
-					class="form-control form-control-sm" id="lastNameKana"
-					aria-describedby="lastNameKana" placeholder="名カナ"> <small
-					id="lastNameKana" maxlength=25 class="form-text text-muted"></small>
-			</div>
-			<!-- 	名カナ:  	-->
-			<!-- 	性別:	  -->
-			<div class="form-group">
-				<label for="gender">性別:</label>
-				<div class="col-md-6">
+			<div class="row">
+				<div class="col-sm">
 					<div class="form-group">
-						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-							<input type="radio" name="gender" value="M">男&nbsp;&nbsp;&nbsp;<input
-								type="radio" name="gender" value="F">女<br>
-						</div>
+						<label for="firstName">姓:</label> <input type="text"
+							class="form-control form-control-sm" id="firstName"
+							aria-describedby="firstName" placeholder="姓"> <small
+							id="firstName" maxlength=25 class="form-text text-muted"></small>
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="lastName">名:</label> <input type="text"
+							class="form-control form-control-sm" id="lastName"
+							aria-describedby="lastName" placeholder="名"> <small
+							id="lastName" maxlength=25 class="form-text text-muted"></small>
 					</div>
 				</div>
 			</div>
-			<!-- 	性別:	  	-->
-			<!-- 	メールアドレス:	  -->
+			<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="firstNameKana">姓カナ:</label> <input type="text"
+							class="form-control form-control-sm" id="firstNameKana"
+							aria-describedby="firstNameKana" placeholder="姓カナ"> <small
+							id="firstNameKana" maxlength=25 class="form-text text-muted"></small>
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="lastNameKana">名カナ:</label> <input type="text"
+							class="form-control form-control-sm" id="lastNameKana"
+							aria-describedby="lastNameKana" placeholder="名カナ"> <small
+							id="lastNameKana" maxlength=25 class="form-text text-muted"></small>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="gender">性別:&nbsp;&nbsp;</label> <input type="radio" name="gender"
+					value="M">男&nbsp;&nbsp;&nbsp;<input type="radio"
+					name="gender" value="F">女<br>
+			</div>
 			<div class="form-group">
 				<label for="email">メールアドレス:</label> <input type="text"
 					class="form-control form-control-sm" id="email"
 					aria-describedby="email" placeholder="メールアドレス"> <small
 					id="email" maxlength=25 class="form-text text-muted"></small>
 			</div>
-			<!-- 	メールアドレス: 	 -->
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary btn-sm">Submit</button>
 		</form>
 	</div>
 </body>
