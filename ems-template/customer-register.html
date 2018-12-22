@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Customer Registration</title>
+<title>お客様登録</title>
 <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -25,42 +25,55 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 	crossorigin="anonymous"></script>
+<script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 
 	<div class="container jumbotron">
-		<div class="row">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-md-12 col-xs-10">
+		<form>
+		<div class="row col">
 			<div class="col-md-4">
 				<h3>お客様登録</h3>
 				<hr>
 			</div>
 		</div>
-		<form>
+		
 			<div class="form-group">
-				<label for="InputCompany"><font color="red">*</font>会社名</label> <input type="email" class="form-control form-control-sm"
+				<label for="InputCompany">会社名<span class="text-danger">*</span></label><input type="email" class="form-control form-control-sm"
 					id="exampleInputEmail1" aria-describedby="companyHelp"
 					placeholder="会社名">
 			</div>
 			<div class="form-group">
-				<label for="InputDate"><font color="red">*</font>契約開始日</label> <input class="form-control form-control-sm" id="InputDate"
+				<label for="InputDate">契約開始日<span class="text-danger">*</span></label> 
+				<input type="text" class="form-control form-control-sm" id="startDate"
 					placeholder="契約開始日">
 			</div>
-			<div class="form-group">
-				<label for="InputCode"><font color="red">*</font>郵便番号　</label>
-				<input type="text" class="form-control form-control-sm"
-					id="InputCode" aria-describedby="emailHelp"
-					placeholder="郵便番号　">
-			</div>
-			<div class="form-group">
-				<label for="InputAddress"><font color="red">*</font>住所</label>
-				<textarea class="form-control form-control-sm" rows="3"
-					id="InputAddress" aria-describedby="address"
-					placeholder="住所"></textarea>
-			</div>
+			<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="InputCode">郵便番号<span class="text-danger">*</span></label>
+								<input type="text" class="form-control form-control-sm"
+									id="InputCode" aria-describedby="emailHelp" placeholder="郵便番号　">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="InputAddress">住所<span class="text-danger">*</span></label>
+								<textarea class="form-control form-control-sm" rows="3"
+									id="InputAddress" aria-describedby="address" placeholder="住所"></textarea>
+							</div>
+						</div>
+					</div>
 			<div class="row">
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="InputContactPerson"><font color="red">*</font>責任者姓</label> 
+						<label for="InputContactPerson">責任者姓<span class="text-danger">*</span></label> 
 						<input type="text"
 							class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" placeholder="責任者姓">
@@ -68,7 +81,7 @@
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="InputContactPerson"><font color="red">*</font>責任者姓かな</label> 
+						<label for="InputContactPerson">責任者姓かな<span class="text-danger">*</span></label> 
 						<input type="text"
 							class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" placeholder="責任者姓かな">
@@ -78,7 +91,7 @@
 			<div class="row">
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="InputContactPerson"><font color="red">*</font>責任者名</label> <input type="text"
+						<label for="InputContactPerson">責任者名<span class="text-danger">*</span></label> <input type="text"
 							class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" placeholder="責任者名">
 					</div>
@@ -86,7 +99,7 @@
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="InputContactPerson"><font color="red">*</font>責任者名かな</label> <input type="text"
+						<label for="InputContactPerson">責任者名かな<span class="text-danger">*</span></label> <input type="text"
 							class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" placeholder="責任者名かな">
 					</div>
@@ -96,7 +109,7 @@
 			<div class="row">
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="exampleInputEmail1">責任者メール</label> <input
+						<label for="exampleInputEmail1">責任者メール<span class="text-danger">*</span></label> <input
 							type="email" class="form-control form-control-sm"
 							id="exampleInputEmail1" aria-describedby="emailHelp"
 							placeholder="責任者メール"> 
@@ -105,7 +118,7 @@
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="InputCode"><font color="red">*</font>責任者電話番号</label> <input type="text" class="form-control form-control-sm"
+						<label for="InputCode">責任者電話番号<span class="text-danger">*</span></label> <input type="text" class="form-control form-control-sm"
 							id="InputCode" aria-describedby="emailHelp"
 							placeholder="責任者電話番号">
 					</div>
@@ -116,8 +129,13 @@
 			<button type="submit" class="btn btn-primary">クリア</button>
 		</form>
 	</div>
-
-
+	</div>
+	</div>
+<script type="text/javascript">
+$('#startDate').datepicker({
+	uiLibrary : 'bootstrap4'
+});
+</script>
 
 </body>
 </html>
