@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Customer Updating</title>
+<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+	integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="container jumbotron">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>お客様更新</h3>
+				<hr>
+			</div>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="InputCompany"><font color="red">*</font>会社名</label> <input type="email" class="form-control form-control-sm"
+					id="exampleInputEmail1" aria-describedby="companyHelp"
+					placeholder="会社名">
+			</div>
+			<div class="form-group">
+				<label for="InputDate"><font color="red">*</font>契約開始日</label> <input class="form-control form-control-sm" id="InputDate"
+					placeholder="契約開始日">
+			</div>
+			<div class="form-group">
+				<label for="InputCode"><font color="red">*</font>郵便番号　</label>
+				<input type="text" class="form-control form-control-sm"
+					id="InputCode" aria-describedby="emailHelp"
+					placeholder="郵便番号　">
+			</div>
+			<div class="form-group">
+				<label for="InputAddress"><font color="red">*</font>住所</label>
+				<textarea class="form-control form-control-sm" rows="3"
+					id="InputAddress" aria-describedby="address"
+					placeholder="住所"></textarea>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="InputContactPerson"><font color="red">*</font>責任者姓</label> 
+						<input type="text"
+							class="form-control form-control-sm" id="exampleInputEmail1"
+							aria-describedby="emailHelp" placeholder="責任者姓">
+					</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="InputContactPerson"><font color="red">*</font>責任者姓かな</label> 
+						<input type="text"
+							class="form-control form-control-sm" id="exampleInputEmail1"
+							aria-describedby="emailHelp" placeholder="責任者姓かな">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="InputContactPerson"><font color="red">*</font>責任者名</label> <input type="text"
+							class="form-control form-control-sm" id="exampleInputEmail1"
+							aria-describedby="emailHelp" placeholder="責任者名">
+					</div>
+
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="InputContactPerson"><font color="red">*</font>責任者名かな</label> <input type="text"
+							class="form-control form-control-sm" id="exampleInputEmail1"
+							aria-describedby="emailHelp" placeholder="責任者名かな">
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="exampleInputEmail1">責任者メール</label> <input
+							type="email" class="form-control form-control-sm"
+							id="exampleInputEmail1" aria-describedby="emailHelp"
+							placeholder="責任者メール"> 
+					</div>
+
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="InputCode"><font color="red">*</font>責任者電話番号</label> <input type="text" class="form-control form-control-sm"
+							id="InputCode" aria-describedby="emailHelp"
+							placeholder="責任者電話番号">
+					</div>
+				</div>
+				</div>
+			<button type="submit" class="btn btn-primary" disabled="disabled">登録</button>
+			<button type="submit" class="btn btn-primary">更新</button>
+			<button type="submit" class="btn btn-primary" disabled="disabled">クリア</button>
+		</form>
+	</div>
+
+
+
+</body>
+</html>
