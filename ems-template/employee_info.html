@@ -25,64 +25,79 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 	crossorigin="anonymous"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 	<div class="container jumbotron">
 		
 		<form>
-			<div class="row">
+			<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tab1">個人情報</a></li>
+    <li><a data-toggle="tab" href="#tab2">個人情報（私設)</a></li>
+    <li><a data-toggle="tab" href="#tab3">住所</a></li>
+    <li><a data-toggle="tab" href="#tab4">交通情報</a></li>
+  </ul>
+	
+	<div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+      <h3><strong>個人情報</strong></h3>
+      <div class="row mt-5">
 				<div class="col-sm">
-					<div class="form-group">
+					<div class="form-group ">
 						<label for="exampleInputEmail1">社員番号</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm " id="exampleInputEmail1"
 							aria-describedby="emailHelp"> 
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">姓</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">名</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
-			</div>
-			
-			<div class="row">
+	   </div>
+
+	   <div class="row">
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">誕生日</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">姓カナ</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">名カナ</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp"> 
 					</div>
 				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-sm">
+	   </div>
+
+	   <div class="row">
+				 <div class="col-sm">
 					<div class="form-group">
-						<label for="exampleInputEmail1">性別&nbsp;&nbsp;&nbsp;</label> 
+						<label for="exampleInputEmail1">性別&nbsp;&nbsp;&nbsp;</label> <br>
 						<div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
   <label class="custom-control-label" for="customRadioInline1">Male</label>
@@ -92,110 +107,123 @@
   <label class="custom-control-label" for="customRadioInline2">Female</label>
 </div>
 </div>
-				</div>
-				
-			
-			</div>
-			
-			<div class="row">
-			<div class="col-sm">
-					<div class="form-group">
-						<label for="exampleInputEmail1">国籍・地域</label> 
-						<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-					</div>
-				</div>
-				
+				</div> 
 				<div class="col-sm">
 					<div class="form-group">
-						<label for="exampleInputEmail1">グループ名</label> 
-						<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-					</div>
-				</div>
-			
-				<div class="col-sm">
-					<div class="form-group">
-						<label for="exampleInputEmail1">部署名</label> <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-					</div>
-					
 						
-				
+							
+								<label for="exampleInputEmail1">国籍・地域</label> <select
+									class="custom-select " id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+							
+						
+					</div>
 				</div>
-		
-			</div>
-			
-			<div class="row">
+
 				<div class="col-sm">
+					<div class="form-group">
+								<label for="exampleInputEmail1">グループ名<span
+									class="text-danger">*</span></label> <select
+									class="custom-select" id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+					</div>
+				</div>
+			</div>
+
+<div class="row">
+	<div class="col-sm">
+					<div class="form-group">
+								<label for="exampleInputEmail1">部署名<span
+									class="text-danger">*</span></label> <select
+									class="custom-select" id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+					</div>
+	</div>
+
+<div class="col-sm">
+					<div class="form-group">
+								<label for="exampleInputEmail1">バンド<span
+									class="text-danger">*</span></label> 
+									
+									<select
+									class="custom-select" id="inputGroupSelect01" height="100">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+					</div>
+	</div>
+
+<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">電話番号</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp"> 
 					</div>
 				</div>
+				
+
+			</div>
+
+			<div class="row">
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">メールアドレス</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="form-group">
 						<label for="exampleInputEmail1">入試日</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
+							type="email" class="form-control form-control-sm" id="exampleInputEmail1"
 							aria-describedby="emailHelp" > 
 					</div>
 				</div>
+				<div class="col-sm"></div>
 			</div>
-			
-			<div class="row">
-				<div class="col-sm">
-					<div class="form-group">
-						<label for="exampleInputEmail1">電話番号</label> 
-						<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+
+
+    </div>
+     <div id="tab2" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div> 
+    <div id="tab3" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div> 
+ <div id="tab4" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div> 
 </div>
-					</div>
-				</div>
-				
-			</div>
-			
+		
 		</form>
 	</div>
-aaaa
+
 
 </body>
 </html>
