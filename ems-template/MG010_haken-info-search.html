@@ -82,8 +82,13 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-12 col-md-12 col-xs-10">
 				<form>
-					<div class="row col">
-						<h5>社員派遣先情報更新</h5>
+					<div class="row">
+						<div class="col-md-6">
+							<h5>社員派遣先情報更新</h5>
+						</div>
+						<div class="col-md-2 ml-md-auto">
+							<button class="btn btn-sm btn-primary float-md-right btn-block"><i class="fas fa-plus"></i>登録</button>
+						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-2 col-sm-3">
@@ -126,13 +131,17 @@
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
 								<label for="exampleInputPassword1">&nbsp</label>
-								<button type="submit" class="btn btn-sm btn-primary btn-block">更新</button>
+								<button type="submit" class="btn btn-sm btn-primary btn-block">
+									<i class="fas fa-search"></i>検索
+								</button>
 							</div>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
+
+		<br>
 
 		<table id="example"
 			class="table table-sm table-striped table-bordered nowrap bg-white"
@@ -357,6 +366,10 @@
 				</tr>
 			</tbody>
 		</table>
+		<br>
+		<div class="row col">
+			<button type="submit" class="btn btn-sm btn-primary col-md-1"><i class="fas fa-file-export"></i>出力</button>
+		</div>
 	</div>
 	<script>
 		$('#startDate').datepicker({
