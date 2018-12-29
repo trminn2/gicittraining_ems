@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Employee Skill Information</title>
+<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+	integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container jumbotron">
+
+		<form>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#tab1">個人情報</a></li>
+				<li><a data-toggle="tab" href="#tab2">個人情報（私設)</a></li>
+				<li><a data-toggle="tab" href="#tab3">住所</a></li>
+				<li><a data-toggle="tab" href="#tab4">交通情報</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="tab1" class="tab-pane fade in active">
+					<h3>
+						<strong>個人情報</strong>
+					</h3>
+					<div class="row mt-5">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">社員番号</label> <input type="email"
+									class="form-control form-control-sm " id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">姓</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">名</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">誕生日</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">姓カナ</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">名カナ</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">性別&nbsp;&nbsp;&nbsp;</label> <br>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline1"
+										name="customRadioInline1" class="custom-control-input ">
+									<label class="custom-control-label" for="customRadioInline1">Male</label>
+								</div>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline2"
+										name="customRadioInline1" class="custom-control-input">
+									<label class="custom-control-label" for="customRadioInline2">Female</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+
+
+								<label for="exampleInputEmail1">国籍・地域</label> <select
+									class="custom-select custom-select-lg" id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+
+
+							</div>
+						</div>
+
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">グループ名</label> <select
+									class="custom-select custom-select-lg" id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">部署名</label> <select
+									class="custom-select custom-select-lg" id="inputGroupSelect01">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">バンド</label> <select
+									class="custom-select custom-select-lg" id="inputGroupSelect01"
+									height="100">
+									<option selected>選択してください...</option>
+									<option value="1">お客様先 1</option>
+									<option value="1">お客様先 2</option>
+									<option value="1">お客様先 3</option>
+									<option value="1">お客様先 4</option>
+									<option value="1">お客様先 5</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">電話番号</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">メールアドレス</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">入試日</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm"></div>
+					</div>
+					<div class="row">
+						<div class=" col-12">
+							<div class="form-group ">
+								<button type="button" class="btn btn-primary float-right">保存</button>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div id="tab2" class="tab-pane fade">
+					<h3>
+						<strong>個人情報（私設)</strong>
+					</h3>
+					<div class="row mt-5">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">在留番号</label> <input type="email"
+									class="form-control form-control-sm " id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">在留資格</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">在留期限</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">在留期限（満了日）</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポートの種類</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート番号</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">パスポート国番号</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート権限</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート発行日</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">パスポート有効期限</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">銀行口座</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">個人番号</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">保険タイプ</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">被保険者番号</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">被保険者認定日</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">保険会社番号</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">保険会社名</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class=" col-12">
+							<div class="form-group ">
+								<button type="button" class="btn btn-primary float-right">保存</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div id="tab3" class="tab-pane fade">
+					<h3>
+						<strong>住所</strong>
+					</h3>
+					<div class="row mt-5">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">郵便番号</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">住所</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<button type="button" class="btn btn-primary float-right">保存</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="tab4" class="tab-pane fade">
+					<h3>
+						<strong>交通情報</strong>
+					</h3>
+					<div class="row mt-5">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">定期券バス有効期限</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">開始駅</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">行き先駅</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group ">
+								<button type="button" class="btn btn-primary float-right">保存</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+	</div>
+	</form>
+	</div>
+
+
+</body>
+</html>
