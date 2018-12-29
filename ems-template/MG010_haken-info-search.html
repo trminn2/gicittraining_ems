@@ -1,0 +1,370 @@
+<!-- KYIMINHAN -->
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>派遣先情報一覧</title>
+<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	crossorigin="anonymous">
+<!-- Bootstrap Datatable CSS -->
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+	integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
+
+<!-- Bootstrap Datatable JS -->
+<script
+	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"
+	charset="utf-8"></script>
+<script
+	src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"
+	charset="utf-8"></script>
+<script
+	src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"
+	charset="utf-8"></script>
+<script
+	src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#example').DataTable({
+			responsive : {
+				details : {
+					display : $.fn.dataTable.Responsive.display.modal({
+						header : function(row) {
+							var data = row.data();
+							return 'Details for ' + data[0] + ' ' + data[1];
+						}
+					}),
+					renderer : $.fn.dataTable.Responsive.renderer.tableAll({
+						tableClass : 'table'
+					})
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+	<div class="container jumbotron">
+		<div class="row justify-content-center">
+			<div class="col-lg-12 col-md-12 col-xs-10">
+				<form>
+					<div class="row col">
+						<h5>社員派遣先情報更新</h5>
+					</div>
+					<div class="row">
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputEmail1">会社名 </label> <input type="text"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp" placeholder="会社名を入れてください">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputEmail1">派遣先部署名 </label> <input
+									type="text" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp"
+									placeholder="派遣先部署名を入れてください">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputEmail1">氏名</label> <input type="text"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp" placeholder="氏名を入れてください">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputEmail1">契約開始日</label> <input type="text"
+									class="form-control form-control-sm" id="startDate"
+									placeholder="契約開始日を入れてください">
+							</div>
+
+						</div>
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputPassword1">契約開終了日</label> <input
+									type="text" class="form-control form-control-sm" id="endDate"
+									placeholder="契約開終了日を入れてください">
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-3">
+							<div class="form-group">
+								<label for="exampleInputPassword1">&nbsp</label>
+								<button type="submit" class="btn btn-sm btn-primary btn-block">更新</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<table id="example"
+			class="table table-sm table-striped table-bordered nowrap bg-white"
+			style="width: 100%">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>遣先部署名</th>
+					<th>会社</th>
+					<th>名前(漢字)</th>
+					<th>名前(カナ)</th>
+					<th>電話番号</th>
+					<th>メールアドレス</th>
+					<th>住所</th>
+					<th>更新</th>
+				</tr>
+			</thead>
+			<tbody class="bg-white">
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+				<tr>
+					<td class="text-center"><small>1</small></td>
+					<td><small>GIC Co. Ltd.,</small></td>
+					<td><small>Kyi Min Han</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>チミンハン</small></td>
+					<td><small>12345678901</small></td>
+					<td><small>kyiminhan@gic.co.jp</small></td>
+					<td><small>〒136−0072東京都江東区大島４丁目1番６−707号</small></td>
+					<td class="text-center"><small><a href="#"><i
+								class="fas fa-edit"></i></a></small></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		$('#startDate').datepicker({
+			uiLibrary : 'bootstrap4'
+		});
+		$('#endDate').datepicker({
+			uiLibrary : 'bootstrap4'
+		});
+	</script>
+</body>
+</html>
