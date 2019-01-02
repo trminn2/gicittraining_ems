@@ -1,18 +1,19 @@
 <!-- 
- 作成日：　2018年12月22日
+ 作成日：　2019年01月02日
   作成者：　モープィンピュー
-  更新日：
+  更新日： 
   更新者：
   説明　：　社員詳細html
  -->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <!-- Required meta tags -->
+<meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>社員詳細</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Employee Skill Information</title>
 <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -32,6 +33,14 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 	crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"
 	type="text/javascript"></script>
 <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
@@ -39,40 +48,768 @@
 </head>
 <body>
 	<div class="container jumbotron">
-		<!-- Nav pills -->
-		<ul class="nav nav-tabs">
-			<li class="nav-item"><a class="nav-link" data-toggle="pill"
-				href="#個人">初期情報</a></li>
-			<li class="nav-item"><a class="nav-link" data-toggle="pill"
-				href="#スキル">スキル情報</a></li>
-			<li class="nav-item"><a class="nav-link" data-toggle="pill"
-				href="#派遣">派遣情報</a></li>
-		</ul>
+		<form>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#tab1">初期情報</a></li>
+				<li><a data-toggle="tab" href="#tab2">スキル情報</a></li>
+				<li><a data-toggle="tab" href="#tab3">派遣情報</a></li>
+			</ul>
+			<div class="tab-content">
+				<!--	 詳細情報	 -->
+				<div id="tab1" class="tab-pane fade in active">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 col-md-12 col-xs-10">
+							<div id="tab1">
+								<form class="form-horizontal" role="form" method="post"
+									name="employee_edit" action="/employee_edit"
+									accept-charset="UTF8">
+									<div class="form-group">
+										<h5>
+											<b>初期情報</b>
+										</h5>
+									</div>
+									<div class="border border-primary rounded">
+										<div class="form-group">
+											<div class="row">
+												<div class="col-sm">
+													<div class="form-group">
+														<label for="employeeId">社員ID:</label> <input type="text"
+															class="form-control form-control-sm" id="employeeId"
+															aria-describedby="employeeId"> <small
+															id="employeeId" class="form-text text-muted"></small>
+													</div>
+												</div>
+												<div class="col-sm">
+													<div class="form-group"></div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm">
+													<div class="form-group">
+														<label for="firstName">名前:</label> <input type="text"
+															class="form-control form-control-sm" id="firstName"
+															aria-describedby="firstName"> <small
+															id="firstName" class="form-text text-muted"></small>
+													</div>
+												</div>
+												<div class="col-sm">
+													<div class="form-group">
+														<label for="lastName">名前( 「仮名」) :</label> <input
+															type="text" class="form-control form-control-sm"
+															id="lastName" aria-describedby="lastName"> <small
+															id="lastName" class="form-text text-muted"></small>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm">
+													<div class="form-group">
+														<label for="gender">性:</label> <input type="text"
+															class="form-control form-control-sm" id="gender"
+															aria-describedby="gender"> <small id="gender"
+															class="form-text text-muted"></small>
+													</div>
+												</div>
+												<div class="col-sm">
+													<div class="form-group">
+														<label for="email">メールアドレス:</label> <input type="text"
+															class="form-control form-control-sm" id="email"
+															aria-describedby="email"> <small id="email"
+															class="form-text text-muted"></small>
+													</div>
+												</div>
+											</div>
+											<button type="submit" class="btn btn-primary btn-sm">編集</button>
+										</div>
+									</div>
+								</form>
+								<!--	 初期情報		 -->
+								<br />
+								<!--	 詳細情報		 -->
+								<form class="form-horizontal" role="form" method="post"
+									name="employee_info_edit" action="" accept-charset="UTF8">
+									<div class="form-group">
+										<h5>
+											<b>詳細情報</b>
+										</h5>
+									</div>
+									<div class="border border-primary rounded">
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample0"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample0">詳細情報</a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="nationality">国籍:</label> <input type="text"
+														class="form-control form-control-sm" id="nationality"
+														aria-describedby="nationality"> <small
+														id="nationality" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="phone">電話番号:</label> <input type="text"
+														class="form-control form-control-sm" id="phone"
+														aria-describedby="phone"> <small id="phone"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="group_name">グループ名:</label> <input type="text"
+														class="form-control form-control-sm" id="group_name"
+														aria-describedby="group_name"> <small
+														id="group_name" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="phone">部署名:</label> <input type="text"
+														class="form-control form-control-sm" id="phone"
+														aria-describedby="phone"> <small id="phone"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="group_name">グループ名:</label> <input type="text"
+														class="form-control form-control-sm" id="group_name"
+														aria-describedby="group_name"> <small
+														id="group_name" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="department_name">部署名:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="department_name" aria-describedby="department_name">
+													<small id="department_name" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="band">バンド:</label> <input type="text"
+														class="form-control form-control-sm" id="band"
+														aria-describedby="band"> <small
+														id="band" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample0">
+													<label for="residenceStatus">在留資格:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="residenceStatus" aria-describedby="residenceStatus">
+													<small id="residenceStatus" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<!--	 詳細情報		 -->
+										<!-- 	プライバシー情報	 -->
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample1"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample1">プライバシー情報</a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="residenceStatus">在留資格:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="residenceStatus" aria-describedby="residenceStatus">
+													<small id="residenceStatus" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="residenceStatus">在留資格:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="residenceStatus" aria-describedby="residenceStatus">
+													<small id="residenceStatus" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="residencePeriod">在留期間:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="residencePeriod" aria-describedby="residencePeriod">
+													<small id="residencePeriod" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="residenceExpire">在留期間（満了日）:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="residenceExpire"> <small id="residenceExpire"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportType">パスポートの種類:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportType" aria-describedby="passportType">
+													<small id="passportType" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportNum">パスポートの番号:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportNum" aria-describedby="passportNum"> <small
+														id="passportNum" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportCountryCode">パスポート国番号:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportCountryCode"
+														aria-describedby="passportCountryCode"> <small
+														id="passportCountryCode" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportAuthority">パスポート有効期限:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportAuthority"
+														aria-describedby="passportAuthority"> <small
+														id="passportAuthority" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportExpiredDate">パスポート発行日:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportExpiredDate"> <small
+														id="passportExpiredDate" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="passportIssuedDate">パスポート機関:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="passportIssuedDate"> <small
+														id="passportIssuedDate" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="bankAccount">銀行口座:</label> <input type="text"
+														class="form-control form-control-sm" id="bankAccount"
+														aria-describedby="bankAccount"> <small
+														id="bankAccount" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="myNumber">個人番号:</label> <input type="text"
+														class="form-control form-control-sm" id="myNumber"
+														aria-describedby="myNumber"> <small id="myNumber"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="insuranceType">保険タイプ:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="insuranceType" aria-describedby="insuranceType">
+													<small id="insuranceType" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="insuredNum">被保険者番号:</label> <input type="text"
+														class="form-control form-control-sm" id="insuredNum"
+														aria-describedby="insuredNum"> <small
+														id="insuredNum" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="insuredQualifiedDate">被保険者認定日:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="insuredQualifiedDate"> <small
+														id="insuredQualifiedDate" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="insurerNum">保険会社番号:</label> <input type="text"
+														class="form-control form-control-sm" id="insurerNum"
+														aria-describedby="insurerNum"> <small
+														id="insurerNum" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1">
+													<label for="insurerName">保険会社名:</label> <input type="text"
+														class="form-control form-control-sm" id="insurerName"
+														aria-describedby="insurerName"> <small
+														id="insurerName" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample1"></div>
+											</div>
+										</div>
+										<!-- 	プライバシー情報	  -->
+										<!-- 	住所		 -->
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample2"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample2">住所 </a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample2">
+													<label for="postal_code">郵便番号:</label> <input type="text"
+														class="form-control form-control-sm" id="postal_code"
+														aria-describedby="postal_code"> <small
+														id="postal_code" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample2">
+													<label for="address">住所:</label>
+													<textarea class="form-control form-control-sm" id="address"
+														aria-describedby="address"></textarea>
+													<small id="address" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<!-- 	住所		 -->
+										<!-- 	交通情報		 -->
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample3"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample3">交通情報 </a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample3">
+													<label for="commuterPassExpiredDate">定期券パス有効期限:</label> <input
+														type="text" class="form-control form-control-sm"
+														id="commuterPassExpiredDate"> <small
+														id="commuterPassExpiredDate" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample3"></div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample3">
+													<label for="startStation">出発駅:</label> <input type="text"
+														class="form-control form-control-sm" id="startStation"
+														aria-describedby="startStation"> <small
+														id="startStation" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample3">
+													<label for="endStation">到着駅:</label> <input type="text"
+														class="form-control form-control-sm" id="endStation"
+														aria-describedby="endStation"> <small
+														id="endStation" class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+										<!-- 	交通情報		 -->
+										<button type="submit" name="btnedit"
+											class="btn btn-primary btn-sm">編集</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	 詳細情報	 -->
+				<!--	 スキル情報	 -->
+				<div id="tab2" class="tab-pane fade">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 col-md-12 col-xs-10">
+							<div id="tab2" class="tab-pane fade in active">
+								<br />
+								<form class="form-horizontal" role="form" method="post"
+									name="skill_edit" action="/skill_edit" accept-charset="UTF8">
+									<div class="form-group">
+										<h5>
+											<b>スキル情報</b>
+										</h5>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm">
+												<div class="form-group">
+													<label for="employeeId">社員ID:</label> <input type="text"
+														class="form-control form-control-sm" id="employeeId"
+														aria-describedby="employeeId"> <small
+														id="employeeId" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="form-group">
+													<label for="name">名前:</label> <input type="text"
+														class="form-control form-control-sm" id="name"
+														aria-describedby="name"> <small id="name"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="border border-primary rounded">
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample4"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample4">スキル情報 </a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample4">
+													<table id="example"
+														class="table table-sm table-striped table-bordered nowrap bg-white"
+														style="width: 100%">
+														<thead>
+															<tr>
+																<th>言語・開発方法</th>
+																<th>関連技術(OS,DB,MW,etc)</th>
+																<th>業務範囲</th>
+																<th>ューマンスキル・業務経歴</th>
+															</tr>
+														</thead>
+														<tbody class="bg-white">
+															<tr>
+																<td><small>Java</small></td>
+																<td><small>Window</small></td>
+																<td><small>Socialサイト</small></td>
+																<td><small>基本設計</small></td>
+															</tr>
+															<tr>
+																<td><small>PHP</small></td>
+																<td><small>Linux</small></td>
+																<td><small>デザインコーデイング</small></td>
+																<td><small>詳細設計</small></td>
+															</tr>
+															<tr>
+																<td><small>ACCESS</small></td>
+																<td><small>Oracle</small></td>
+																<td><small>社員情報管理</small></td>
+																<td><small>プロジェクト作成</small></td>
+															</tr>
+															<tr>
+																<td><small>JavaScript</small></td>
+																<td><small>MySQL</small></td>
+																<td><small>メンタルヘルスシステム</small></td>
+																<td><small>単体テスト</small></td>
+															</tr>
+															<tr>
+																<td><small>Flash</small></td>
+																<td><small>WampServer</small></td>
+																<td><small>セキュリティ室管理</small></td>
+																<td><small>結合テスト</small></td>
+															</tr>
+														</tbody>
+													</table>
 
-		<!-- include area -->
-		<div th:replace="/TG012_employee-info-tab.html::header"></div>
-		<!-- include area -->
+												</div>
+											</div>
 
+										</div>
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample5"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample5">業務経歴 </a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample5">
+													<table id="example2"
+														class="table table-sm table-striped table-bordered nowrap bg-white"
+														style="width: 100%">
+														<thead>
+															<tr>
+																<th>No</th>
+																<th>期限</th>
+																<th>業務内容</th>
+																<th>開発環境</th>
+																<th>作業内容</th>
+																<th>SE/PG</th>
+																<th>役割</th>
+															</tr>
+														</thead>
+														<tbody class="bg-white">
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+															<tr>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+																<td></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<button type="submit" name="btnedit"
+											class="btn btn-primary btn-sm">編集</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	 スキル情報	 -->
+
+				<!--	 派遣情報	 -->
+				<div id="tab3" class="tab-pane fade">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 col-md-12 col-xs-10">
+							<div id="tab3" class="tab-pane fade in active">
+								<br />
+								<form class="form-horizontal" role="form" method="post"
+									name="haken_edit" action="/haken_edit" accept-charset="UTF8">
+									<div class="form-group">
+										<h5>
+											<b>派遣情報</b>
+										</h5>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm">
+												<div class="form-group">
+													<label for="employeeId">社員ID:</label> <input type="text"
+														class="form-control form-control-sm" id="employeeId"
+														aria-describedby="employeeId"> <small
+														id="employeeId" class="form-text text-muted"></small>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="form-group">
+													<label for="name">名前:</label> <input type="text"
+														class="form-control form-control-sm" id="name"
+														aria-describedby="name"> <small id="name"
+														class="form-text text-muted"></small>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="border border-primary rounded">
+										<p>
+											<a data-toggle="collapse" href="#multiCollapseExample6"
+												role="button" aria-expanded="false"
+												aria-controls="multiCollapseExample6">派遣情報 </a>
+										</p>
+										<div class="row">
+											<div class="col-sm">
+												<div class="collapse multi-collapse"
+													id="multiCollapseExample6">
+													<table id="example"
+														class="table table-sm table-striped table-bordered nowrap bg-white"
+														style="width: 100%">
+														<thead>
+															<tr>
+																<th>番号</th>
+																<th>会社名</th>
+																<th>部著名</th>
+																<th>名前</th>
+																<th>名前（仮名）</th>
+																<th>電話番号</th>
+																<th>メールアドレス</th>
+																<th>契約開始日</th>
+																<th>郵便番号</th>
+																<th>住所</th>
+																<th>更新</th>
+															</tr>
+														</thead>
+														<tbody class="bg-white">
+															<tr>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td class="text-center"><small><a href="#">編</a></small></td>
+															</tr>
+															<tr>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td class="text-center"><small><a href="#">編</a></small></td>
+															</tr>
+															<tr>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td class="text-center"><small><a href="#">編</a></small></td>
+															</tr>
+															<tr>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td class="text-center"><small><a href="#">編</a></small></td>
+															</tr>
+															<tr>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td><small>xxxxxx</small></td>
+																<td class="text-center"><small><a href="#">編</a></small></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	 派遣情報	 -->
+			</div>
+		</form>
 	</div>
-	<script type="text/javascript">
-		$('#commuterPassExpiredDate').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-		$('#hiredDate').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-		$('#passportIssuedDate').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-		$('#passportExpiredDate').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-		$('#insuredQualifiedDate').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-		$('#residenceExpire').datepicker({
-			uiLibrary : 'bootstrap4'
-		});
-	</script>
 </body>
+<script type="text/javascript">
+	$('#commuterPassExpiredDate').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+	$('#hiredDate').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+	$('#passportIssuedDate').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+	$('#passportExpiredDate').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+	$('#insuredQualifiedDate').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+	$('#residenceExpire').datepicker({
+		uiLibrary : 'bootstrap4'
+	});
+</script>
 </html>
