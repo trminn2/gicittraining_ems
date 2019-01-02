@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!-- Required meta tags -->
+
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,25 +34,49 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-  <link rel="import" href="/TG007_EmployeeInfo_private.html"> 
-  <script></script>
-	<!-- <script> 
-     $(function(){
-      $("#tab2").load("TG007_EmployeeInfo_private.html"); 
-     
-    }); 
-  
-    </script>  -->
+<script src="https://code.jquery.com/jquery-1.10.3.js"></script>
+
 </head>
 <body>
-<script>
-$( "#tab2" ).load( "/TG007_EmployeeInfo_private.html" );
-</script>
-	<div class="container jumbotron">
+	<script>
+		$(document).ready(function() {
+			$('.first').click(function() {
+				$('.nav-tabs a[href="#tab2"]').tab('show');
+			});
+		});
 
+		$(document).ready(function() {
+			$('.secondNext').click(function() {
+				$('.nav-tabs a[href="#tab3"]').tab('show');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.secondPre').click(function() {
+				$('.nav-tabs a[href="#tab1"]').tab('show');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.thirdPre').click(function() {
+				$('.nav-tabs a[href="#tab2"]').tab('show');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.thirdNext').click(function() {
+				$('.nav-tabs a[href="#tab4"]').tab('show');
+			});
+		});
+
+		$(document).ready(function() {
+			$('.fourPre').click(function() {
+				$('.nav-tabs a[href="#tab3"]').tab('show');
+			});
+		});
+	</script>
+	<div class="container jumbotron">
 		<form>
 			<ul class="nav nav-tabs">
 				<li class="active"><a data-toggle="tab" href="#tab1">個人情報</a></li>
@@ -223,7 +248,10 @@ $( "#tab2" ).load( "/TG007_EmployeeInfo_private.html" );
 					<div class="row">
 						<div class=" col-12">
 							<div class="form-group ">
-								<button type="button" class="btn btn-primary float-right">保存</button>
+								<!-- <button type="button" id="first"
+									class="btn btn-primary float-right">次へ</button> -->
+								<a class="first btn btn-primary float-right">次へ</a>
+
 							</div>
 						</div>
 
@@ -232,7 +260,155 @@ $( "#tab2" ).load( "/TG007_EmployeeInfo_private.html" );
 				</div>
 
 
-				<div id="tab2"></div>
+				<div id="tab2" class="tab-pane fade">
+					<h3>
+						<strong>個人情報（私設)</strong>
+					</h3>
+					<div class="row mt-5">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">在留番号</label> <input type="email"
+									class="form-control form-control-sm " id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">在留資格</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">在留期限</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">在留期限（満了日）</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポートの種類</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート番号</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">パスポート国番号</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート権限</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">パスポート発行日</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">パスポート有効期限</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">銀行口座</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">個人番号</label> <input type="email"
+									class="form-control form-control-sm" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">保険タイプ</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">被保険者番号</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">被保険者認定日</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group ">
+								<label for="exampleInputEmail1">保険会社番号</label> <input
+									type="email" class="form-control form-control-sm "
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="exampleInputEmail1">保険会社名</label> <input
+									type="email" class="form-control form-control-sm"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-end">
+						<div class=" col-4 ">
+							<button type="button"
+								class="secondPre btn btn-primary float-right">戻り</button>
+						</div>
+						<button type="button"
+							class="secondNext btn btn-primary float-right mr-5">次へ</button>
+					</div>
+				</div>
 
 				<div id="tab3" class="tab-pane fade">
 					<h3>
@@ -260,15 +436,18 @@ $( "#tab2" ).load( "/TG007_EmployeeInfo_private.html" );
 
 					</div>
 
-					<div class="row">
-						<div class="col-md-4">
-							<div class="form-group ">
-								<button type="button" class="btn btn-primary float-right">保存</button>
-							</div>
-						</div>
 
+					<div class="row group-end mr-5">
+						<div class="col-md-4">
+							<button type="button"
+								class="thirdPre btn btn-primary float-right">戻り</button>
+						</div>
+						<button type="button"
+							class="thirdNext btn btn-primary float-right mr-5 btnNext">次へ</button>
 					</div>
+
 				</div>
+
 				<div id="tab4" class="tab-pane fade">
 					<h3>
 						<strong>交通情報</strong>
@@ -306,19 +485,20 @@ $( "#tab2" ).load( "/TG007_EmployeeInfo_private.html" );
 
 					</div>
 
-					<div class="row">
+					<div class="row group-end mr-5">
 						<div class="col-md-4">
-							<div class="form-group ">
-								<button type="button" class="btn btn-primary float-right">保存</button>
-							</div>
+							<button type="button" class="fourPre btn btn-primary float-right">戻り</button>
 						</div>
-
+						<button type="button"
+							class="fourNext btn btn-primary float-right mr-5 btnNext">保存</button>
 					</div>
+
 				</div>
 			</div>
+		</form>
 	</div>
-	</form>
-	</div>
+
+
 
 
 </body>
