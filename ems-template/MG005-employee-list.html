@@ -61,7 +61,7 @@
 <script
 	src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"
 	charset="utf-8"></script>
-	
+
 </script>
 <link rel="stylesheet"
 	href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" />
@@ -86,7 +86,63 @@
 </script>
 </head>
 <body>
-
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">EMS</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> 社員情報管理 </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="MG005-employee-list.html">社員一覧</a><a
+							class="dropdown-item" href="MG004_employee-intial-info.html">社員情報初期登録</a><a
+							class="dropdown-item" href="MG014_employee-haken-create.html">社員派遣先情報登録</a>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> 個人情報管理 </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="MG007_EmployeeInfo.html">個人情報登録</a>
+						<a class="dropdown-item" href="#">社員スキル登録</a>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> お客様管理 </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="MG015-customer-list.html">お客様一覧</a>
+						<a class="dropdown-item" href="MG013-customer-register.html">お客様登録</a>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#"
+					id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> 派遣状況管理 </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="MG010_haken-info-search.html">派遣先情報一覧</a>
+						<a class="dropdown-item" href="MG009_All_HakenInfo.html">派遣先情報登録</a>
+					</div></li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> 設定 </a>
+					<div class="dropdown-menu dropdown-menu-right"
+						aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">パスワード変更</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">ログアウト</a>
+					</div></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="container jumbotron">
 		<div class="row justify-content-center">
 			<div class="col-lg-12 col-md-12 col-xs-10">
@@ -98,42 +154,42 @@
 					<div class="row">
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-									<label for="empNO">社員番号 </label> <input type="text"
+								<label for="empNO">社員番号 </label> <input type="text"
 									class="form-control form-control-sm" id="empNO"
 									aria-describedby="emailHelp" placeholder="社員番号で検索してください">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-									<label for="empName">社員名 </label> <input type="text"
+								<label for="empName">社員名 </label> <input type="text"
 									class="form-control form-control-sm" id="empName"
 									aria-describedby="emailHelp" placeholder="社員名で検索してください">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-									<label for="gender">性別</label> <input type="text"
+								<label for="gender">性別</label> <input type="text"
 									class="form-control form-control-sm" id="gender"
 									aria-describedby="emailHelp" placeholder="性別で検索してください">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-									<label for="group">グループ</label> <input type="text"
+								<label for="group">グループ</label> <input type="text"
 									class="form-control form-control-sm" id="group"
 									aria-describedby="emailHelp" placeholder="グループで検索してください">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-									<label for="email">メール </label> <input type="text"
+								<label for="email">メール </label> <input type="text"
 									class="form-control form-control-sm" id="email"
 									aria-describedby="emailHelp" placeholder="メールで検索してください">
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-3">
 							<div class="form-group">
-							<label for="search">&nbsp;</label>
+								<label for="search">&nbsp;</label>
 								<button type="submit" class="btn btn-sm btn-primary btn-block">
 									<i class="fas fa-search"></i>検索
 								</button>
