@@ -1,0 +1,367 @@
+<!-- 
+ 作成日：　2018年12月29日
+  作成者：　モープィンピュー
+  更新日：
+  更新者：
+  説明　：　初期情報タブhtml
+ -->
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<div class="tab-content">
+		<!--	 初期情報		 -->
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-md-12 col-xs-10">
+				<div id="個人" class="tab-pane fade in active">
+					<form class="form-horizontal" role="form" method="post"
+						name="employee_edit" action="/employee_edit" accept-charset="UTF8">
+						<div class="form-group">
+							<h5>
+								<b>初期情報</b>
+							</h5>
+						</div>
+						<div class="form-group">
+							<div class="form-group">
+								<label for="employeeId">社員ID:</label> <input type="text"
+									class="form-control form-control-sm" id="employeeId"
+									aria-describedby="employeeId"> <small id="employeeId"
+									class="form-text text-muted"></small>
+							</div>
+							<div class="row">
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="firstName">名前:</label> <input type="text"
+											class="form-control form-control-sm" id="firstName"
+											aria-describedby="firstName"> <small id="firstName"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="lastName">名前( 「仮名」) :</label> <input type="text"
+											class="form-control form-control-sm" id="lastName"
+											aria-describedby="lastName"> <small id="lastName"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="gender">性:</label> <input type="text"
+											class="form-control form-control-sm" id="gender"
+											aria-describedby="gender"> <small id="gender"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="email">メールアドレス:</label> <input type="text"
+											class="form-control form-control-sm" id="email"
+											aria-describedby="email"> <small id="email"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary btn-sm">編集</button>
+						</div>
+					</form>
+					<!--	 初期情報		 -->
+					<br />
+					<!--	 詳細情報		 -->
+					<form class="form-horizontal" role="form" method="post"
+						name="employee_info_edit" action="" accept-charset="UTF8">
+						<div class="form-group">
+							<h5>
+								<b>詳細情報</b>
+							</h5>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="nationality">国籍:</label> <input type="text"
+										class="form-control form-control-sm" id="nationality"
+										aria-describedby="nationality"> <small
+										id="nationality" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="phone">電話番号:</label> <input type="text"
+										class="form-control form-control-sm" id="phone"
+										aria-describedby="phone"> <small id="phone"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="group_name">グループ名:</label> <input type="text"
+										class="form-control form-control-sm" id="group_name"
+										aria-describedby="group_name"> <small id="group_name"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="department_name">部署名:</label> <input type="text"
+										class="form-control form-control-sm" id="department_name"
+										aria-describedby="department_name"> <small
+										id="department_name" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="band">バンド:</label> <input type="text"
+										class="form-control form-control-sm" id="band"
+										aria-describedby="band"> <small id="band"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="form-group">
+									<label for="hiredDate">入社日:</label> <input type="text"
+										class="form-control form-control-sm" id="hiredDate"> <small
+										id="hiredDate" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<!--	 詳細情報		 -->
+						<!-- 	プライバシー情報	 -->
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample1" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample1">プライバシー情報</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="residenceNo">在留番号:</label> <input type="text"
+										class="form-control form-control-sm" id="residenceNo"
+										aria-describedby="residenceNo"> <small
+										id="residenceNo" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="residenceStatus">在留資格:</label> <input type="text"
+										class="form-control form-control-sm" id="residenceStatus"
+										aria-describedby="residenceStatus"> <small
+										id="residenceStatus" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="residencePeriod">在留期間:</label> <input type="text"
+										class="form-control form-control-sm" id="residencePeriod"
+										aria-describedby="residencePeriod"> <small
+										id="residencePeriod" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="residenceExpire">在留期間（満了日）:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="residenceExpire"> <small id="residenceExpire"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportType">パスポートの種類:</label> <input type="text"
+										class="form-control form-control-sm" id="passportType"
+										aria-describedby="passportType"> <small
+										id="passportType" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportNum">パスポートの番号:</label> <input type="text"
+										class="form-control form-control-sm" id="passportNum"
+										aria-describedby="passportNum"> <small
+										id="passportNum" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportCountryCode">パスポート国番号:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="passportCountryCode"
+										aria-describedby="passportCountryCode"> <small
+										id="passportCountryCode" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportAuthority">パスポート有効期限:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="passportAuthority" aria-describedby="passportAuthority">
+									<small id="passportAuthority" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportExpiredDate">パスポート発行日:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="passportExpiredDate"> <small
+										id="passportExpiredDate" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="passportIssuedDate">パスポート機関:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="passportIssuedDate"> <small
+										id="passportIssuedDate" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="bankAccount">銀行口座:</label> <input type="text"
+										class="form-control form-control-sm" id="bankAccount"
+										aria-describedby="bankAccount"> <small
+										id="bankAccount" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="myNumber">個人番号:</label> <input type="text"
+										class="form-control form-control-sm" id="myNumber"
+										aria-describedby="myNumber"> <small id="myNumber"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="insuranceType">保険タイプ:</label> <input type="text"
+										class="form-control form-control-sm" id="insuranceType"
+										aria-describedby="insuranceType"> <small
+										id="insuranceType" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="insuredNum">被保険者番号:</label> <input type="text"
+										class="form-control form-control-sm" id="insuredNum"
+										aria-describedby="insuredNum"> <small id="insuredNum"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="insuredQualifiedDate">被保険者認定日:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="insuredQualifiedDate"> <small
+										id="insuredQualifiedDate" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="insurerNum">保険会社番号:</label> <input type="text"
+										class="form-control form-control-sm" id="insurerNum"
+										aria-describedby="insurerNum"> <small id="insurerNum"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<label for="insurerName">保険会社名:</label> <input type="text"
+										class="form-control form-control-sm" id="insurerName"
+										aria-describedby="insurerName"> <small
+										id="insurerName" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<!-- 	プライバシー情報	  -->
+						<!-- 	住所		 -->
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample2" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample2">住所
+							</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample2">
+									<label for="postal_code">郵便番号:</label> <input type="text"
+										class="form-control form-control-sm" id="postal_code"
+										aria-describedby="postal_code"> <small
+										id="postal_code" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample2">
+									<label for="address">住所:</label>
+									<textarea class="form-control form-control-sm" id="address"
+										aria-describedby="address"></textarea>
+									<small id="address" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<!-- 	住所		 -->
+						<!-- 	交通情報		 -->
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample3" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample3">交通情報
+							</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample3">
+									<label for="commuterPassExpiredDate">定期券パス有効期限:</label> <input
+										type="text" class="form-control form-control-sm"
+										id="commuterPassExpiredDate"> <small
+										id="commuterPassExpiredDate" class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample3">
+									<label for="startStation">出発駅:</label> <input type="text"
+										class="form-control form-control-sm" id="startStation"
+										aria-describedby="startStation"> <small
+										id="startStation" class="form-text text-muted"></small>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample3">
+									<label for="endStation">到着駅:</label> <input type="text"
+										class="form-control form-control-sm" id="endStation"
+										aria-describedby="endStation"> <small id="endStation"
+										class="form-text text-muted"></small>
+								</div>
+							</div>
+						</div>
+						<!-- 	交通情報		 -->
+						<button type="submit" name="btnedit"
+							class="btn btn-primary btn-sm">編集</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--	 詳細情報	 -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!-- 
+ 作成日：　2019年01月02日
+  作成者：　モープィンピュー
+  更新日：
+  更新者：
+  説明　：　派遣情報タブhtml
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+	integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="tab-content">
+		<!--	派遣情報	 -->
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-md-12 col-xs-10">
+				<div id="派遣" class="tab-pane fade in active">
+					<br />
+					<form class="form-horizontal" role="form" method="post"
+						name="haken_edit" action="/haken_edit" accept-charset="UTF8">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="employeeId">社員ID:</label> <input type="text"
+											class="form-control form-control-sm" id="employeeId"
+											aria-describedby="employeeId"> <small id="employeeId"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="name">名前:</label> <input type="text"
+											class="form-control form-control-sm" id="name"
+											aria-describedby="name"> <small id="name"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br />
+						<div class="form-group">
+							<h5>
+								<b>派遣情報</b>
+							</h5>
+						</div>
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample1" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample1">派遣情報
+							</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<table id="example"
+										class="table table-sm table-striped table-bordered nowrap bg-white"
+										style="width: 100%">
+										<thead>
+											<tr>
+												<th>番号</th>
+												<th>会社名</th>
+												<th>部著名</th>
+												<th>名前</th>
+												<th>名前（仮名）</th>
+												<th>電話番号</th>
+												<th>メールアドレス</th>
+												<th>契約開始日</th>
+												<th>郵便番号</th>
+												<th>住所</th>
+												<th>更新</th>
+											</tr>
+										</thead>
+										<tbody class="bg-white">
+											<tr>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td class="text-center"><small><a href="#">編</a></small></td>
+											</tr>
+											<tr>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td class="text-center"><small><a href="#">編</a></small></td>
+											</tr>
+											<tr>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td class="text-center"><small><a href="#">編</a></small></td>
+											</tr>
+											<tr>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td class="text-center"><small><a href="#">編</a></small></td>
+											</tr>
+											<tr>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td><small>xxxxxx</small></td>
+												<td class="text-center"><small><a href="#">編</a></small></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--	 派遣情報	 -->
+	</div>
+</body>
+</html>

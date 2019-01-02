@@ -1,0 +1,179 @@
+<!-- 
+ 作成日：　2019年01月02日
+  作成者：　モープィンピュー
+  更新日：
+  更新者：
+  説明　：　スキル情報タブhtml
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div class="tab-content">
+		<!--	スキル情報		 -->
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-md-12 col-xs-10">
+				<div id="スキル" class="tab-pane fade in active">
+					<br />
+					<form class="form-horizontal" role="form" method="post"
+						name="skill_edit" action="/skill_edit" accept-charset="UTF8">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="employeeId">社員ID:</label> <input type="text"
+											class="form-control form-control-sm" id="employeeId"
+											aria-describedby="employeeId"> <small id="employeeId"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+								<div class="col-sm">
+									<div class="form-group">
+										<label for="name">名前:</label> <input type="text"
+											class="form-control form-control-sm" id="name"
+											aria-describedby="name"> <small id="name"
+											class="form-text text-muted"></small>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br />
+						<div class="form-group">
+							<h5>
+								<b>スキル情報</b>
+							</h5>
+						</div>
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample1" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample1">スキル情報
+							</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample1">
+									<table id="example"
+										class="table table-sm table-striped table-bordered nowrap bg-white"
+										style="width: 100%">
+										<thead>
+											<tr>
+												<th>言語・開発方法</th>
+												<th>関連技術(OS,DB,MW,etc)</th>
+												<th>業務範囲</th>
+												<th>ューマンスキル・業務経歴</th>
+											</tr>
+										</thead>
+										<tbody class="bg-white">
+											<tr>
+												<td><small>Java</small></td>
+												<td><small>Window</small></td>
+												<td><small>Socialサイト</small></td>
+												<td><small>基本設計</small></td>
+											</tr>
+											<tr>
+												<td><small>PHP</small></td>
+												<td><small>Linux</small></td>
+												<td><small>デザインコーデイング</small></td>
+												<td><small>詳細設計</small></td>
+											</tr>
+											<tr>
+												<td><small>ACCESS</small></td>
+												<td><small>Oracle</small></td>
+												<td><small>社員情報管理</small></td>
+												<td><small>プロジェクト作成</small></td>
+											</tr>
+											<tr>
+												<td><small>JavaScript</small></td>
+												<td><small>MySQL</small></td>
+												<td><small>メンタルヘルスシステム</small></td>
+												<td><small>単体テスト</small></td>
+											</tr>
+											<tr>
+												<td><small>Flash</small></td>
+												<td><small>WampServer</small></td>
+												<td><small>セキュリティ室管理</small></td>
+												<td><small>結合テスト</small></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+						</div>
+						<p>
+							<a class="btn btn-primary" data-toggle="collapse"
+								href="#multiCollapseExample2" role="button"
+								aria-expanded="false" aria-controls="multiCollapseExample2">業務経歴
+							</a>
+						</p>
+						<div class="row">
+							<div class="col-sm">
+								<div class="collapse multi-collapse" id="multiCollapseExample2">
+									<table id="example2"
+										class="table table-sm table-striped table-bordered nowrap bg-white"
+										style="width: 100%">
+										<thead>
+											<tr>
+												<th>No</th>
+												<th>期限</th>
+												<th>業務内容</th>
+												<th>開発環境</th>
+												<th>作業内容</th>
+												<th>SE/PG</th>
+												<th>役割</th>
+											</tr>
+										</thead>
+										<tbody class="bg-white">
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<button type="submit" name="btnedit"
+							class="btn btn-primary btn-sm">編集</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--	 スキル情報	 -->
+	</div>
+</body>
+</html>
