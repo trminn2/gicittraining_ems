@@ -36,13 +36,11 @@
 	type="text/javascript"></script>
 <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
 	rel="stylesheet" type="text/css" />
-<style>
-</style>
 </head>
 <body>
 	<div class="container jumbotron">
 		<!-- Nav pills -->
-		<ul class="nav nav-pills">
+		<ul class="nav nav-tabs">
 			<li class="nav-item"><a class="nav-link" data-toggle="pill"
 				href="#個人">初期情報</a></li>
 			<li class="nav-item"><a class="nav-link" data-toggle="pill"
@@ -51,9 +49,10 @@
 				href="#派遣">派遣情報</a></li>
 		</ul>
 
-	<!-- include area -->
-	<!-- include area -->
-		
+		<!-- include area -->
+		<div th:replace="/TG012_employee-info-tab.html::header"></div>
+		<!-- include area -->
+
 	</div>
 	<script type="text/javascript">
 		$('#commuterPassExpiredDate').datepicker({
