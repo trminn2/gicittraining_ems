@@ -1,6 +1,6 @@
 <!-- 
  作成日：　2019年01月28日
-  作成者：　テッテッカイン
+  作成者：　テッ テッ カイン
   更新日：
   更新者：
   説明　：　ログイン画面
@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>お客様登録</title>
+<title>ログイン画面</title>
 <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -36,11 +36,31 @@
 	type="text/javascript"></script>
 <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
 	rel="stylesheet" type="text/css" />
+<script>
+    /* Error Message */
+	$(document).ready(function() {
+		$('#errormsg').hide();
+	});
+</script>
 </head>
 
 <body>
 	<div class="container jumbotron ">
 		<div class="container jumbotron mt-5 w-50 p-3 ">
+			<!-- Title -->
+			<div class="row justify-content-center align-items-center">
+				<h3>ログイン</h3>
+			</div>
+
+			<!-- Error Message -->
+			<div class="row">
+				<div class="form-group pl-5">
+					<span id="errormsg"
+						class="pl-3 align-middle font-weight-bolder text-danger">エラーメッセージ</span>
+				</div>
+			</div>
+
+			<!-- Input User Email -->
 			<div class="row">
 				<div class="col-md-4 ml-md-auto">
 					<div class="form-group pl-5">
@@ -56,6 +76,7 @@
 				</div>
 			</div>
 
+			<!-- Input Password -->
 			<div class="row">
 				<div class="col-md-4 ml-md-auto">
 					<div class="form-group pl-5">
@@ -71,9 +92,13 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- Forgot Password Link -->
 			<div class="text-right">
 				<a href="#" class="font-weight-bold "><u>パスワード忘れた方</u></a>
 			</div>
+			
+			<!-- Button -->
 			<div class="row mt-2">
 				<div class="col-12 text-center">
 					<input class="btn btn-primary" type="submit" value="Submit">
